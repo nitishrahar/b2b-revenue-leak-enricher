@@ -1,0 +1,55 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "🎯 Zero-Cognitive-Load Overview",
+            "description": "The columns that make the 3-second decision for you, in the order you'll actually read them.",
+            "transformation": {
+                "fields": [
+                    "leadPriority",
+                    "companyName",
+                    "domain",
+                    "bestEmail",
+                    "bestPhone",
+                    "estDealValue",
+                    "threeSecondSummary",
+                    "whatToPitch",
+                    "oneClickColdEmail",
+                    "oneClickLoomScript",
+                    "linkedinUrl",
+                    "instagramUrl",
+                    "cmsPlatform",
+                    "emailProvider",
+                    "adPixelLeak",
+                    "aiSearchReadinessScore",
+                    "dmarcStatus",
+                    "website"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "leadPriority": { "label": "Priority", "format": "text" },
+                    "companyName": { "label": "Company", "format": "text" },
+                    "domain": { "label": "Domain", "format": "text" },
+                    "bestEmail": { "label": "Best Email", "format": "text" },
+                    "bestPhone": { "label": "Best Phone", "format": "text" },
+                    "estDealValue": { "label": "Est. Deal Value", "format": "text" },
+                    "threeSecondSummary": { "label": "3-Second Summary", "format": "text" },
+                    "whatToPitch": { "label": "What To Pitch", "format": "text" },
+                    "oneClickColdEmail": { "label": "Cold Email (copy/paste)", "format": "text" },
+                    "oneClickLoomScript": { "label": "Loom Script", "format": "text" },
+                    "linkedinUrl": { "label": "LinkedIn", "format": "link" },
+                    "instagramUrl": { "label": "Instagram", "format": "link" },
+                    "cmsPlatform": { "label": "CMS", "format": "text" },
+                    "emailProvider": { "label": "Email Provider", "format": "text" },
+                    "adPixelLeak": { "label": "Ad Pixel Leak", "format": "text" },
+                    "aiSearchReadinessScore": { "label": "AI-GEO Score", "format": "number" },
+                    "dmarcStatus": { "label": "DMARC Status", "format": "text" },
+                    "website": { "label": "Website", "format": "link" }
+                }
+            }
+        }
+    }
+}

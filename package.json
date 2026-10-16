@@ -1,0 +1,23 @@
+{
+    "name": "360-b2b-revenue-leak-osint-geo-contact-enricher",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "360° B2B Revenue-Leak, Passive OSINT, GEO & Contact Enricher (Zero-Cognitive-Load Edition) - an Apify Actor that turns a keyword or domain list into prioritized, pitch-ready leads with tech-stack, ad-pixel, GEO/llms.txt, DNS/security and contact enrichment.",
+    "main": "src/main.js",
+    "private": true,
+    "license": "UNLICENSED",
+    "scripts": {
+        "start": "node src/main.js",
+        "start:dev": "node src/main.js",
+        "lint": "node --check src/main.js",
+        "test": "echo \"No automated tests - validate with a local run via `apify run`\" && exit 0"
+    },
+    "dependencies": {
+        "apify": "^3.2.0",
+        "cheerio": "^1.0.0",
+        "got-scraping": "^4.0.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}

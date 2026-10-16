@@ -1,0 +1,98 @@
+{
+    "title": "360° B2B Revenue-Leak, Passive OSINT, GEO & Contact Enricher",
+    "description": "Zero-cognitive-load B2B prospecting. Type a niche + city OR paste domains. We do the rest: tech-stack, ad-pixel leaks, GEO/llms.txt readiness, DNS/DMARC & security headers, decision-maker contacts, deal-value scoring, and a ready-to-send cold email — per lead, automatically.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "searchKeyword": {
+            "title": "🔍 1. Just type what you're looking for (Zero-URL Mode)",
+            "type": "string",
+            "editor": "textfield",
+            "description": "Plain English works best, e.g. \"MedSpas in Austin\" or \"Roofing contractors in Dallas\". Leave empty if you're pasting your own URLs below.",
+            "prefill": "MedSpas in Austin"
+        },
+        "urls": {
+            "title": "🌐 2. ...OR paste your own domains / URLs",
+            "type": "array",
+            "editor": "stringList",
+            "description": "One domain or URL per line. If filled, this takes priority over the search keyword for those exact sites.",
+            "prefill": [
+                "https://www.gymshark.com",
+                "https://www.allbirds.com"
+            ]
+        },
+        "agencyFocus": {
+            "title": "🎯 3. What kind of agency are you? (customizes the pitch & cold email)",
+            "type": "string",
+            "editor": "select",
+            "description": "We tailor whatToPitch, estDealValue and oneClickColdEmail to the service you sell.",
+            "enum": [
+                "all",
+                "smma_ads",
+                "ai_automation",
+                "seo_geo",
+                "cyber_it"
+            ],
+            "enumTitles": [
+                "🧩 All-in-One / Not sure yet (show every gap)",
+                "📈 Paid Ads / SMMA (Meta, TikTok, Google Ads)",
+                "🤖 AI Chatbot & Automation Agency",
+                "🔍 SEO & 2026 AI-GEO Agency (ChatGPT/Perplexity visibility)",
+                "🛡️ IT, Email Security & Cybersecurity (MSP)"
+            ],
+            "default": "all",
+            "sectionCaption": "🎯 Customize Your Pitch",
+            "sectionDescription": "This changes nothing about the data we collect — only how the pitch, deal value and cold email are worded."
+        },
+        "maxResults": {
+            "title": "🔢 Max leads to return",
+            "type": "integer",
+            "description": "Maximum number of enriched companies to output in this run. Keep it small while testing.",
+            "default": 20,
+            "minimum": 1,
+            "maximum": 500,
+            "sectionCaption": "⚙️ Crawl Settings",
+            "sectionDescription": "Fine-tune speed, depth and cost. Defaults work great for most users."
+        },
+        "crawlContactPages": {
+            "title": "🕵️ Deep-crawl Contact / About / Team pages (2-Hop Crawler)",
+            "type": "boolean",
+            "description": "Finds up to 2 extra high-value pages per site (/contact, /about, /team, /support, /impressum) to extract 3x more decision-maker emails, phones and social profiles. Adds ~1-3s per lead.",
+            "default": true
+        },
+        "maxSearchQueriesPerKeyword": {
+            "title": "🔎 Search depth (only used in Search Keyword mode)",
+            "type": "integer",
+            "description": "How many DuckDuckGo query variations to run to discover enough clean business domains (directories like Yelp/Facebook/LinkedIn are auto-filtered out).",
+            "default": 3,
+            "minimum": 1,
+            "maximum": 10
+        },
+        "requestTimeoutSecs": {
+            "title": "⏱️ Per-request timeout guard (seconds)",
+            "type": "integer",
+            "description": "A slow or dead site will never hang the run — we give up on any single request after this many seconds and move on.",
+            "default": 15,
+            "minimum": 5,
+            "maximum": 60
+        },
+        "proxyConfiguration": {
+            "title": "🌍 Proxy configuration",
+            "type": "object",
+            "editor": "proxy",
+            "description": "Recommended for larger runs / Search Keyword mode to avoid rate-limits. Works great with Apify's default datacenter proxies.",
+            "default": {
+                "useApifyProxy": true
+            }
+        },
+        "webhookUrl": {
+            "title": "🔗 Push every lead live to Clay / Make / n8n (optional)",
+            "type": "string",
+            "editor": "textfield",
+            "description": "Paste a webhook URL and we'll POST each enriched lead the instant it's ready — zero manual CSV downloading. Leave empty to skip.",
+            "sectionCaption": "⚙️ Advanced / Integrations",
+            "sectionDescription": "Optional real-time push so your automations run without you lifting a finger."
+        }
+    },
+    "required": []
+}

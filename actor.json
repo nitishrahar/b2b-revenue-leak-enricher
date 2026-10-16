@@ -1,0 +1,15 @@
+{
+    "actorSpecification": 1,
+    "name": "360-b2b-revenue-leak-geo-contact-enricher",
+    "title": "360° B2B Revenue-Leak, Passive OSINT, GEO & Contact Enricher (Zero-Cognitive-Load Edition)",
+    "description": "Turn a plain-English niche keyword OR a list of domains into a prioritized, pitch-ready B2B lead sheet. Zero-block passive OSINT: tech stack, Meta/TikTok/Google ad-pixel leaks, 2026 AI-GEO (llms.txt) readiness, DNS/DMARC & security-header audit, decision-maker emails/phones/socials via a 2-hop contact crawler, an estimated deal value, a ready-to-send cold email, and a 60-second Loom audit script — fully generated automatically with zero manual analysis.",
+    "version": "1.0",
+    "buildTag": "latest",
+    "meta": {
+        "templateId": "js-empty"
+    },
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    }
+}
